@@ -214,8 +214,9 @@ function generateInstalmentPlan() {
             var instalmentList = document.getElementById('instalment-grid');
             instalmentList.insertAdjacentHTML('beforeend', `<div class="field-wrapper"><label for="Instalment-${i}" class="booking-field-label booking name">INSTALMENT&nbsp;${i}</label><input type="text" maxlength="256" name="Instalment-${i}" data-name="Instalment ${i}" id="instalment-${i}" class="instalment w-input" readonly=""></div>`);
             var instalment = arrayName[i-1];
-            var ins = instalment.toFixed(2);
-            document.getElementById(`instalment-${i}`).value = `£${ins}`;
+            var instalmentTwoDecimals = instalment.toFixed(2);
+            console.log(instalmentTwoDecimals);
+            document.getElementById(`instalment-${i}`).value = `£${arrayName[i-1]}`;
         }
     }
 
