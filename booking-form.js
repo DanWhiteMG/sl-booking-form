@@ -193,19 +193,19 @@ function generateInstalmentPlan() {
     oneInstalment.push(annualCost);
 
     var fourInstalments = [];
-    fourInstalments.push(annualCost * 0.15).toFixed(2);
-    fourInstalments.push(annualCost * 0.33).toFixed(2);
-    fourInstalments.push(annualCost * 0.30).toFixed(2);
-    fourInstalments.push(annualCost * 0.22).toFixed(2);
+    fourInstalments.push(annualCost * 0.15);
+    fourInstalments.push(annualCost * 0.33);
+    fourInstalments.push(annualCost * 0.30);
+    fourInstalments.push(annualCost * 0.22);
 
     var eightInstalments = [];
         for (let i = 1; i<= noOfInstalments; i++) {
-            eightInstalments.push(annualCost * 0.125).toFixed(2);
+            eightInstalments.push(annualCost * 0.125);
         }
 
     var tenInstalments = [];
     for (let i = 1; i<= noOfInstalments; i++) {
-        tenInstalments.push(annualCost * 0.1).toFixed(2);
+        tenInstalments.push(annualCost * 0.1);
     }
 
     function createInputs(number, arrayName) {
@@ -213,7 +213,9 @@ function generateInstalmentPlan() {
         for (let i = 1; i <= number; i++) {
             var instalmentList = document.getElementById('instalment-grid');
             instalmentList.insertAdjacentHTML('beforeend', `<div class="field-wrapper"><label for="Instalment-${i}" class="booking-field-label booking name">INSTALMENT&nbsp;${i}</label><input type="text" maxlength="256" name="Instalment-${i}" data-name="Instalment ${i}" id="instalment-${i}" class="instalment w-input" readonly=""></div>`);
-            document.getElementById(`instalment-${i}`).value = `£${arrayName[i-1]}`;
+            var instalment = arrayName[i-1];
+            var ins = instalment.toFixed(2);
+            document.getElementById(`instalment-${i}`).value = `£${ins}`;
         }
     }
 
