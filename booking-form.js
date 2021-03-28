@@ -217,6 +217,8 @@ function generateInstalmentPlan() {
             var instalmentTwoDecimals = instalment.toFixed(2);
             console.log(instalmentTwoDecimals);
             document.getElementById(`instalment-${i}`).value = `£${arrayName[i-1]}`;
+            var inputValue = document.getElementById(`instalment-${i}`).value;
+            inputValue.value = inputValue.value.replace(/(\.\d{2})\d+/g, '$1');
         }
     }
 
