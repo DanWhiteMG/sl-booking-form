@@ -146,8 +146,6 @@ function getInstalmentPlan() {
     // and payment option together
     var instalmentPlan = tenancyRef + paymentOption;
 
-    console.log(`No. of instalments ref:${instalmentPlan}`);
-
     // Calculate no. of instalments based on value of instalmentPlan
     var noOfInstalments = 0;
 
@@ -160,8 +158,6 @@ function getInstalmentPlan() {
     } else {
         noOfInstalments = 10;
     }
-
-    console.log(`No of instalments:${noOfInstalments}`);
 
     return noOfInstalments;
 
@@ -177,8 +173,6 @@ function generateInstalmentPlan() {
     var noOfInstalments = getInstalmentPlan();
 
     var annualCost = getAnnualCost();
-
-    console.log(`No of instalments (passed from func):${noOfInstalments}`);
 
     // As below function is fired each time 'payment-options' <select> is changed, check
     // to see if inputs have already been created, then remove existing inputs
@@ -224,7 +218,6 @@ function generateInstalmentPlan() {
             instalmentList.insertAdjacentHTML('beforeend', `<div class="field-wrapper"><label for="Instalment-${i}" class="booking-field-label booking name">INSTALMENT&nbsp;${i}</label><input type="text" maxlength="256" name="Instalment-${i}" data-name="Instalment ${i}" id="instalment-${i}" class="instalment w-input" readonly=""></div>`);
             var instalment = arrayName[i-1];
             var instalmentTwoDecimals = instalment.toFixed(2);
-            console.log(instalmentTwoDecimals);
             document.getElementById(`instalment-${i}`).value = `£${instalmentTwoDecimals}`;
         }
     }
