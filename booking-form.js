@@ -223,7 +223,7 @@ function generateInstalmentPlan() {
             var instalment = arrayName[i-1];
             var instalmentTwoDecimals = instalment.toFixed(2);
             console.log(instalmentTwoDecimals);
-            document.getElementById(`instalment-${i}`).value = `£${arrayName[i-1]}`;
+            document.getElementById(`instalment-${i}`).value = `£${instalmentTwoDecimals}`;
         }
     }
 
