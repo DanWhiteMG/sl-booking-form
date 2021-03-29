@@ -10,7 +10,7 @@ document.getElementById('annual-cost').readOnly = true;
 const ENERGY_CHARGE = "£99";
 
 document.getElementById('energy-charge').readOnly = true;
-document.getElementById('energy').value = ENERGY_CHARGE;
+document.getElementById('energy-charge').value = ENERGY_CHARGE;
 
 function getTenancyRef() {
 
