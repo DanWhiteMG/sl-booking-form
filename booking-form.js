@@ -4,8 +4,13 @@ document.getElementById('payment-options').addEventListener("change", getWeeklyC
 
 document.getElementById('weekly-cost').readOnly = true;
 document.getElementById('annual-cost').readOnly = true;
+
+// Add energy charge field and populate with cost
+
+const ENERGY_CHARGE = "£99";
+
 document.getElementById('energy-charge').readOnly = true;
-document.getElementById('energy').value = "£99";
+document.getElementById('energy').value = ENERGY_CHARGE;
 
 function getTenancyRef() {
 
