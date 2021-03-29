@@ -4,6 +4,8 @@ document.getElementById('payment-options').addEventListener("change", getWeeklyC
 
 document.getElementById('weekly-cost').readOnly = true;
 document.getElementById('annual-cost').readOnly = true;
+document.getElementById('energy-charge').readOnly = true;
+document.getElementById('energy').value = "£99";
 
 function getTenancyRef() {
 
