@@ -1,0 +1,113 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "site": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "paymentAmount": {
+          "type": "integer"
+        },
+        "weeklyCost": {
+            "type": "integer"
+        },
+        "accommodation": {
+            "type": "string"
+        },
+        "roomType": {
+            "type": "string"
+        },
+        "bookingPeriod": {
+            "type": "string"
+        },
+        "tenancyDuration": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "firstName": {
+            "type": "string"
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "annualCost": {
+            "type": "string"
+        },
+        "instalment1": {
+            "type": "string"
+        },
+        "instalment2": {
+            "type": "string"
+        },
+        "instalment3": {
+            "type": "string"
+        },
+        "instalment4": {
+            "type": "string"
+        },
+        "instalment5": {
+            "type": "string"
+        },
+        "instalment6": {
+            "type": "string"
+        },
+        "instalment7": {
+            "type": "string"
+        },
+        "instalment8": {
+            "type": "string"
+        },
+        "instalment9": {
+            "type": "string"
+        },
+        "instalment10": {
+            "type": "string"
+        },
+        "dueDate": {
+          "type": "string"
+        },
+        "entityPostCode": {
+          "type": "string"
+        },
+        "entityEmailAddress": {
+          "type": "string"
+        },
+        "entityMobileNumber": {
+          "type": "string"
+        },
+        "entityLandLine": {
+          "type": "string"
+        },
+        "siteNo": {
+          "type": "string"
+        },
+        "invoiceNo": {
+          "type": "string"
+        },
+        "notificationMethod": {
+          "type": "integer"
+        },
+        "variablePaymentAllowed": {
+          "type": "boolean"
+        },
+        "paymentChaseFrequency": {
+          "type": "integer"
+        }
+      }
+    },
+    "d": {
+      "type": "string"
+    },
+    "_id": {
+      "type": "string"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-04/schema#"
+}

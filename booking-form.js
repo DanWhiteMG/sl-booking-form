@@ -7,7 +7,7 @@ document.getElementById('annual-cost').readOnly = true;
 
 // Add energy charge field and populate with cost
 
-const ENERGY_CHARGE = "£99.00";
+const ENERGY_CHARGE = "£199.00";
 
 document.getElementById('energy-charge').readOnly = true;
 document.getElementById('energy-charge').value = ENERGY_CHARGE;
