@@ -76,12 +76,17 @@ function getWeeklyCost() {
     // Set variables for weekly costs to display based on chosen form options
     var first46 = document.getElementById('label-wc-46').textContent;
     var first50 = document.getElementById('label-wc-50').textContent;
-    var rebooker46 = document.getElementById('label-wc-50-r').textContent;
-    var rebooker50 = document.getElementById('label-wc-46-r').textContent;
+    var rebooker46 = document.getElementById('label-wc-46-r').textContent;
+    var rebooker50 = document.getElementById('label-wc-50-r').textContent;
 
     // Calculate weeklyCost by adding array references for tenancy duration and
     // booking type together
     var weeklyCost = getTenancyRef() + getBookingRef();
+
+    // 46 Weeks - First Booking = 10
+    // 46 Weeks - Rebooker = 20
+    // 50 Weeks - First Booking = 25
+    // 50 Weeks - Rebooker = 35
 
     // Set actual £ cost value of 'weekly-cost' input from possible prices
     // determined in Webflow CMS
