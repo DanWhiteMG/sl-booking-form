@@ -2,12 +2,14 @@ document.getElementById('tenancy-duration').addEventListener("change", getWeekly
 document.getElementById('booking-type').addEventListener("change", getWeeklyCost);
 document.getElementById('payment-options').addEventListener("change", getWeeklyCost);
 
+
 document.getElementById('weekly-cost').readOnly = true;
 document.getElementById('annual-cost').readOnly = true;
 
 // Add energy charge field and populate with cost
 
-const ENERGY_CHARGE = "£299.00";
+//const ENERGY_CHARGE = "£299.00";
+const ENERGY_CHARGE = document.getElementById('SetEnergyCharge').value;
 
 document.getElementById('energy-charge').readOnly = true;
 document.getElementById('energy-charge').value = ENERGY_CHARGE;
