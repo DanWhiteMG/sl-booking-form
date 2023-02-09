@@ -229,7 +229,8 @@ function generateInstalmentPlan() {
             
             if (i == 1){
                 // Add Energy Charge to instalment 1:
-                document.getElementById(`instalment-${i}`).value = `£${instalmentTwoDecimals} + ${ENERGY_CHARGE}`;
+                document.getElementById(`instalment-${i}`).value = `£${instalmentTwoDecimals}`;
+                //document.getElementById(`instalment-${i}`).value = `£${instalmentTwoDecimals} + ${ENERGY_CHARGE}`;
                 //document.getElementById('instalment-1').value = document.getElementById('instalment-1').value + "£${ENERGY_CHARGE}";
             } else {
                 
