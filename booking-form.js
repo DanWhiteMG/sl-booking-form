@@ -241,5 +241,9 @@ function generateInstalmentPlan() {
     } else {
         createInputs(noOfInstalments, tenInstalments);
     }
+    
+    
+    // Add Energy Charge to instalment 1:
+    document.getElementById('instalment-1').value = document.getElementById('instalment-1').value + "£${ENERGY_CHARGE}";
 
 };
