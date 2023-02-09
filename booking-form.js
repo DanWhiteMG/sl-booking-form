@@ -225,7 +225,18 @@ function generateInstalmentPlan() {
             instalmentList.insertAdjacentHTML('beforeend', `<div class="field-wrapper"><label for="Instalment-${i}" class="booking-field-label booking name">INSTALMENT&nbsp;${i}</label><input type="text" maxlength="256" name="Instalment-${i}" data-name="Instalment ${i}" id="instalment-${i}" class="instalment w-input" readonly=""></div>`);
             var instalment = arrayName[i-1];
             var instalmentTwoDecimals = instalment.toFixed(2);
-            document.getElementById(`instalment-${i}`).value = `£${instalmentTwoDecimals}`;
+            
+            
+            if (i == 1){
+                // Add Energy Charge to instalment 1:
+                document.getElementById(`instalment-${i}`).value = `£${instalmentTwoDecimals} + ${ENERGY_CHARGE}`;
+                //document.getElementById('instalment-1').value = document.getElementById('instalment-1').value + "£${ENERGY_CHARGE}";
+            } else {
+                
+                document.getElementById(`instalment-${i}`).value = `£${instalmentTwoDecimals}`;
+                
+            }
+            
         }
     }
 
@@ -242,8 +253,5 @@ function generateInstalmentPlan() {
         createInputs(noOfInstalments, tenInstalments);
     }
     
-    
-    // Add Energy Charge to instalment 1:
-    document.getElementById('instalment-1').value = document.getElementById('instalment-1').value + "£${ENERGY_CHARGE}";
 
 };
